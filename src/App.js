@@ -25,12 +25,12 @@ class App extends React.Component {
         <button
           onClick={() => {
             this.setState({ show: !this.state.show });
-            this.setState({ counter: 0 });
+            ;
           }}
         >
           {this.state.show ? "Hide" : "Show"}
         </button>
-        
+        <h2>{this.state.counter}</h2>
         {this.state.show ? (
           <div>
             <h1>{this.state.fullName}</h1>
@@ -38,7 +38,7 @@ class App extends React.Component {
             <img src={this.state.imgSrc} alt="Steve Jobs" />
             <h2>{this.state.profession}</h2>
           </div>
-        ) : <h2>{this.state.counter}</h2>}
+        ) : null}
         
       </div>
     );
